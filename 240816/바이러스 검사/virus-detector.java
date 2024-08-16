@@ -17,8 +17,8 @@ public class Main {
         for(int i = 0; i < N; i++){
             answer++;
             shop[i] -= leader;
-            if(shop[i] != 0)
-                answer += shop[i]/crew; //남은 인원을 crew로 나누고 계산
+            if(shop[i] > 0)
+                answer += shop[i]/crew + 1; //남은 인원을 crew로 나누고 계산
         }
         System.out.println(answer);
     }
