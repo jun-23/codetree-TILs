@@ -4,8 +4,8 @@ public class Main {
     static int op[];
     static int num[];
     static int n;
-    static int min;
-    static int max;
+    static int min = Integer.MAX_VALUE;
+    static int max = Integer.MIN_VALUE;
     static boolean v[];
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
