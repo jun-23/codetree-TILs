@@ -15,21 +15,21 @@ public class Main {
                 map[i][j] = sc.nextInt();
             }
         }
-        dfs(0);
+        dfs(0,0);
         System.out.println(min);
     }
 
-    public static void dfs(int cnt){
+    public static void dfs(int cnt, int idx){
         if(cnt>= N/2){
             diff(); //일 나누기
             return;
         }
 
-        for(int i = 0; i < N; i++){
+        for(int i = idx; i < N; i++){
             if(v[i])
                 continue;
             v[i] = true;
-            dfs(cnt+1);
+            dfs(cnt+1, i + 1);
             v[i] = false;
         }
 
